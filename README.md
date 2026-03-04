@@ -10,9 +10,9 @@ We used the research paper [LncDC](https://www.nature.com/articles/s41598-022-22
 The Github repo for LncDC:https://github.com/lim74/LncDC
 
 ### Dataset Sources & Analysis
-We used data sets from the Target-OS project
+**We used data sets from the Target-OS project**
 
-Files are above
+**Files are above**
 
 **1.** We used the python script "mRNA-Analysis1.py" to perform data analysis and visualization for
   
