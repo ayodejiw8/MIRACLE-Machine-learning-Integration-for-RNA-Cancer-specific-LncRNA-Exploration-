@@ -2,9 +2,14 @@ import streamlit as st
 import pandas as pd
 import joblib
 import numpy as np
+import os
 
-# Load our trained model
-model = joblib.load('os_lncrna_detector.pkl')
+# 1. FIX THE PATH: Find the model file in the same folder as this script
+base_dir = os.path.dirname(__file__)
+model_path = os.path.join(base_dir, 'os_lncrna_detector.pkl')
+
+# 2. LOAD THE MODEL ONCE (at the top)
+model = joblib.load(model_path)
 
 st.title("MIRACLE Project: Osteosarcoma lncRNA Detector")
 st.markdown("Developed by Ayodeji Williams | ASU Bioinformatics")
@@ -18,6 +23,7 @@ if uploaded_file is not None:
     
     # Extract the necessary lncRNA values
     try:
+        # We use tpm_unstranded as it's the standard for our model
         malat1 = df[df['gene_name'] == 'MALAT1']['tpm_unstranded'].values[0]
         neat1 = df[df['gene_name'] == 'NEAT1']['tpm_unstranded'].values[0]
         
@@ -40,6 +46,9 @@ if uploaded_file is not None:
             st.warning(f"Moderate Risk / Borderline: {prob*100:.1f}% probability")
         else:
             st.success(f"Normal/Healthy Signature: {prob*100:.1f}% probability")
+            
+    except Exception as e:
+        st.error(f"Error extracting data: Ensure columns 'gene_name' and 'tpm_unstranded' exist.")
             
     except IndexError:
         st.error("Error: Could not find MALAT1 or NEAT1 in the dataset. Please ensure the file follows GDC standards.")
