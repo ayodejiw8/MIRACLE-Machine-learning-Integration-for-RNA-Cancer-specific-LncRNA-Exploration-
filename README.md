@@ -31,6 +31,9 @@ The Github repo for LncDC:https://github.com/lim74/LncDC
 
 ----
 ----
+
+## ML Model
+The first ML model has been built it is named "os_lncrna_detector.pkl" the detection code is named "null"
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **The contents below comes from the research proposal, they contains words like "will" implying our plans rather than action already taken, this README was written during the research process.**
