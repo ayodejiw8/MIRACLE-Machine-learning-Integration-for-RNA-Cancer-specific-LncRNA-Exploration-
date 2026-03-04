@@ -36,6 +36,8 @@ The Github repo for LncDC:https://github.com/lim74/LncDC
 
 The first ML model has been built in the folder "ML-Model" and it's named "os_lncrna_detector.pkl" the detection code is "1stMLModelDetCode.py"
 
+Here is the url for the GUI for the model: https://miraclerna.streamlit.app/
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **The contents below comes from the research proposal, they contains words like "will" implying our plans rather than action already taken, this README was written during the research process.**
