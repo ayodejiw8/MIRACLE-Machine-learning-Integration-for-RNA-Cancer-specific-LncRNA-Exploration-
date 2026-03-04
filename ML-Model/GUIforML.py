@@ -13,6 +13,8 @@ model = joblib.load(model_path)
 
 st.title("MIRACLE Project: Osteosarcoma lncRNA Detector")
 st.markdown("Developed by Ayodeji Williams | Albany State University Bioinformatics")
+st.markdown("Mentors: Dr.Olabisi Ojo & Dr. Wanjun Hu")
+st.markdown("College of Arts and Science| Department of Math, CS and Physics & Department of Natural Sciences")
 
 st.sidebar.header("User Input")
 uploaded_file = st.sidebar.file_uploader("Upload STAR-Aligned Gene Counts (.tsv)", type="tsv")
